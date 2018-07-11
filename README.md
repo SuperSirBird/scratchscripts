@@ -1,4 +1,5 @@
 # web
-The Bird Website
 
-https://supersirbird.github.io/web/
+ScratchScripts website
+
+https://supersirbird.github.io/scratchscripts/
