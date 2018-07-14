@@ -1,1 +1,67 @@
+<html>
+  <head>
+    <title>ScratchScripts</title>
+  
+  </head>
+  
+  <style>
+    body {
+      background-color:rgb(248,248,248);
+      font-family:monospace;
+      margin-left:0%; 
+      margin-right:0%;
+      text-align: center;}
+    
+    #homebar {
+      background-color:Gainsboro;
+      color: black;
+      box-shadow: 0px 10px 8px rgb(200,200,200);
+      padding:5px;
+    }
+    
+    .box {
+      margin-left:10%;
+      margin-right:10%;
+      background-color:Gainsboro;
+      padding:5px;
+      color: black;
+      box-shadow: 0px 10px 8px rgb(200,200,200);}
+  </style>
+  
+  <body>
+    
+    <div id="homebar">
+      <h1>SCRATCHSCRIPTS</h1>
+    </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="box">
+        <h2>
+        Loading logged in user...
+        
+        </h2>
+        <h3>
+          lol
+        </h3>
+        <script>
+        
+        </script>
+      </div>
+  
+  </body>
+  <script>
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           var response = xhttp.responseText;
+           alert(response);
+    }
+};
+xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/statistics/data/daily/", true);
+xhttp.send();
+}
 
+  </script>
+</html>
