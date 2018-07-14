@@ -61,7 +61,7 @@
       if (this.readyState == 4 && this.status == 200) {
         var response = xhttp.responseText;
         APIaccount = response;
-        document.body.innerHTML = responce;
+        alert(responce);
       }
     };
     xhttp.open("GET", "https://scratch.mit.edu/fragment/account-nav.json", true);
