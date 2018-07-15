@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>ScratchScripts</title>
+    <title>Realtime Stats</title>
   
   </head>
   
@@ -39,11 +39,15 @@
       <br>
       <div class="box">
         <h2>
-        Loading logged in user...
+        Realtime statistics
         
         </h2>
         <h3>
-          lol
+          Projects made in the past <span class="time">?</span> seconds: <span id="projects">0</span> <br>
+          Studios made in the past <span class="time">?</span> seconds: <span id="studios">0</span> <br>
+          Comments posted in the past <span class="time">?</span> seconds: <span id="comments">0</span> <br>
+          <br><br>
+          Updates live every 5 seconds
         </h3>
         <script>
         
@@ -59,7 +63,7 @@
            alert(response);
     }
 };
-xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/fragment/account-nav.json", true);
+xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/statistics/data/daily/", true);
 xhttp.send();
 
 
