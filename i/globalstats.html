@@ -61,8 +61,8 @@
         <h3><em>
           Projects made in the past <span id="seconds">0</span> seconds: <span id="projectslive">0</span><br><br>
           
-          (keep this tab open for a bit and check back on this)
-          Updates live every 5 seconds
+          (check back on live stats in a bit to see) <br>
+          Updates live every 10 seconds
         </em></h3><br>
         
         <script>
@@ -76,7 +76,13 @@
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
            var response = xhttp.responseText;
-           alert(response);
+           obj = json.parse(response);
+          
+          document.getElementById("projects").innerHTML = obj.PROJECT_COUNT;
+          document.getElementById("studios").innerHTML = obj.STUDIO_COUNT;
+          document.getElementById("comments").innerHTML = onj.COMMENT_COUNT;
+          document.getElementById("users").innerHTML = obj.USER_COUNT;
+          
     }
 };
 xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/statistics/data/daily/", true);
