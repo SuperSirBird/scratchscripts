@@ -46,6 +46,11 @@
     #selectionbox:hover {
       background-color: rgb(230,230,230);
     }
+    #selectionbox-selected {
+      background-color:white;
+      float:left;
+      cursor: pointer;
+      background-color: rgb(190,190,190);}
   </style>
   
   <body>
@@ -63,7 +68,7 @@
         </h1><br>
         <textarea name="message" rows="5" placeholder="Your text here..." style="width:95%;" maxlength="500"></textarea>
         <div class="textselections">
-          <div style="width:25%;" id="selectionbox">Default</div>
+          <div style="width:25%;" id="selectionbox-selected">Default</div>
           <div style="width:25%;" id="selectionbox">Underline</div>
           <div style="width:25%;" id="selectionbox">Overline</div>
           <div style="width:25%;" id="selectionbox">Strikethough</div>
