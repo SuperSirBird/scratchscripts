@@ -73,7 +73,18 @@
           <div style="width:25%;" id="selectionbox" onclick="textselections_sel(3)">Overline</div>
           <div style="width:25%;" id="selectionbox" onclick="textselections_sel(4)">Strikethough</div>
           <br>
-        </div><br><br>
+        </div>
+        <select id="font" style="width:95%;">
+          <option value="0">Default font</option>
+          <option value="1">uʍopǝpısd∩</option>
+          <option value="2">𝕊𝕥𝕒𝕟𝕕𝕠𝕦𝕥</option>
+          <option value="3">𝒞𝓊𝓇𝓈𝒾𝓋𝑒</option>
+          <option value="4">𝔎𝔫𝔦𝔤𝔥𝔱</option>
+          <option value="5">ꜱᴍᴀʟʟ ᴄᴀᴘꜱ</option>
+          <option value="6">Ⓑⓤⓑⓑⓛⓔ</option>
+          <option value="7">Ｍｏｎｏｓｐａｃｅ</option>
+        </select>
+        <br>
         
       </div>
   
@@ -90,9 +101,9 @@
       document.getElementsByClassName("textselections")[0].children[sel-1].id = "selectionbox-selected";
       
     }
-  
-  var alphabet = "qwertyuiopasdfghjklzxcvbnm";
-  var upsidedown = "bʍǝɹʇʎnıodɐspɟƃɥɾʞןzxɔʌquɯ";
+    var alphabet = "qwertyuiopasdfghjklzxcvbnm";
+    var decoration = "̴̲̅";
+    var upsidedown = "bʍǝɹʇʎnıodɐspɟƃɥɾʞןzxɔʌquɯ";
   
   </script>
 </html>
