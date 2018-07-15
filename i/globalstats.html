@@ -72,6 +72,8 @@
   
   </body>
   <script>
+    
+    // Get community
   var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -83,10 +85,34 @@
           document.getElementById("comments").innerHTML = obj.COMMENT_COUNT;
           document.getElementById("users").innerHTML = obj.USER_COUNT;
           
-    }
-};
+          loadwebsite();
+          
+          
+      }
+  };
 xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/statistics/data/daily/", true);
 xhttp.send();
+    
+    // Get Website
+    
+    function loadwebsite {
+    
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           var response = xhttp.responseText;
+           obj = JSON.parse(response);
+          
+          document.getElementById("websiteviews").innerHTML = obj.pageviews;
+          document.getElementById("newvisits").innerHTML = obj.users;
+          document.getElementById("visits").innerHTML = obj.sessions;
+
+      }
+  };
+  xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://scratch.mit.edu/statistics/data/monthly-ga/", true);
+  xhttp.send();
+    
+  }
 
 
   </script>
