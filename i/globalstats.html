@@ -73,6 +73,8 @@
   </body>
   <script>
     
+    var oldprojects;
+    
     // Get community
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -106,6 +108,8 @@ xhttp.send();
           document.getElementById("websiteviews").innerHTML = obj.pageviews;
           document.getElementById("newvisits").innerHTML = obj.users;
           document.getElementById("visits").innerHTML = obj.sessions;
+          
+          setuplive();
 
       }
   };
@@ -113,6 +117,10 @@ xhttp.send();
   xhttp.send();
     
   }
+    
+    function setuplive() {
+    
+    }
 
 
   </script>
