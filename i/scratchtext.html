@@ -34,6 +34,8 @@
     .textselections {
       margin-left:2.5%; 
       margin-right:2.5%;}
+    
+    .selectionbox {background-color:white;}
   </style>
   
   <body>
@@ -51,10 +53,10 @@
         </h1><br>
         <textarea name="message" rows="5" placeholder="Your text here..." style="width:95%;" maxlength="500"></textarea>
         <div class="textselections">
-          <button style="width:25%;">Default</button>
-          <button style="width:25%;">Underline</button>
-          <button style="width:25%;">Overline</button>
-          <button style="width:25%;">Strikethough</button>
+          <div style="width:25%;" id="selectionbox">Default</div>
+          <div style="width:25%;" id="selectionbox">Underline</div>
+          <div style="width:25%;" id="selectionbox">Overline</div>
+          <div style="width:25%;" id="selectionbox">Strikethough</div>
         </div>
       </div>
   
