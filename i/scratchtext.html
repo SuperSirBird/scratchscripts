@@ -68,10 +68,10 @@
         </h1><br>
         <textarea name="message" rows="5" placeholder="Your text here..." style="width:95%;" maxlength="500"></textarea>
         <div class="textselections">
-          <div style="width:25%;" id="selectionbox-selected">Default</div>
-          <div style="width:25%;" id="selectionbox">Underline</div>
-          <div style="width:25%;" id="selectionbox">Overline</div>
-          <div style="width:25%;" id="selectionbox">Strikethough</div>
+          <div style="width:25%;" id="selectionbox-selected" onclick="textselections_sel(1)">Default</div>
+          <div style="width:25%;" id="selectionbox" onclick="textselections_sel(2)">Underline</div>
+          <div style="width:25%;" id="selectionbox" onclick="textselections_sel(3)">Overline</div>
+          <div style="width:25%;" id="selectionbox" onclick="textselections_sel(4)">Strikethough</div>
           <br>
         </div><br><br>
         
@@ -79,6 +79,17 @@
   
   </body>
   <script>
+    
+    function textselections_sel(sel) {
+      document.getElementsByClassName("textselections")[0].innerHTML = " \
+          <div style='width:25%;' id='selectionbox' onclick='textselections_sel(1)'>Default</div> \
+          <div style='width:25%;' id='selectionbox' onclick='textselections_sel(2)'>Underline</div> \
+          <div style='width:25%;' id='selectionbox' onclick='textselections_sel(3)'>Overline</div> \
+          <div style='width:25%;' id='selectionbox' onclick='textselections_sel(4)'>Strikethough</div> \
+          <br>"
+      document.getElementsByClassName("textselections")[0].children[sel-1].id = "selectionbox-selected";
+      
+    }
   
   var alphabet = "qwertyuiopasdfghjklzxcvbnm";
   var upsidedown = "bʍǝɹʇʎnıodɐspɟƃɥɾʞןzxɔʌquɯ";
