@@ -110,7 +110,7 @@
         <br><br>
         
         <div id="output">
-        Press Go! then copy and paste the contents of this box (Ctrl+C then Ctrl+V)
+        <h5 id="outtext">Press Go! then copy and paste the contents of this box (Ctrl+C then Ctrl+V)</h5>
         </div>
         <div style="width:95%;" id="GoButton" onclick="createtext()">Go!</div>
         </center>
@@ -135,7 +135,7 @@
     var upsidedown = "bʍǝɹʇʎnıodɐspɟƃɥɾʞןzxɔʌquɯ"; //Translation
     
     function createtext() {
-    document.getElementById("output").innerHTML = document.getElementById("yourtext").value;
+    document.getElementById("outtext").innerHTML = document.getElementById("yourtext").value;
     }
   
   </script>
