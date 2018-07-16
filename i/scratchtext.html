@@ -136,10 +136,15 @@
     
     function createtext() {
       var textin = document.getElementById("yourtext").value;
+      
       var textout = ""
       for (i = 0; i < textin.length; i++) {
-        textout = textout + textin.substring(i,i+1) + decoration.substring(0,1);
+        if (textin.substring(i,i+1) != " " ^^ textin.substring(i,i+1) != "_" && textin.substring(i,i+1) != "-"  ) {
+          textout = textout + textin.substring(i,i+1) + decoration.substring(0,1);
+        else {textout = textout + textin.substring(i,i+1);}
+        }
       }
+      
       document.getElementById("output").innerHTML = textout;
     }
   
