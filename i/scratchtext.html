@@ -142,7 +142,6 @@
         if (textin.substring(i,i+1) != " " && textin.substring(i,i+1) != "_" && textin.substring(i,i+1) != "-"  ) {
           textout = textout + textin.substring(i,i+1) + decoration.substring(0,1);}
         else {textout = textout + textin.substring(i,i+1);}
-        }
       }
       
       document.getElementById("output").innerHTML = textout;
