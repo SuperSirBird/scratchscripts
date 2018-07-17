@@ -120,6 +120,8 @@
   </body>
   <script>
     
+    var textdecoration = -1;
+    
     function textselections_sel(sel) {
       document.getElementsByClassName("textselections")[0].innerHTML = " \
           <div style='width:25%;' id='selectionbox' onclick='textselections_sel(1)'>Default</div> \
@@ -128,6 +130,7 @@
           <div style='width:25%;' id='selectionbox' onclick='textselections_sel(4)'>Strikethough</div> \
           <br>"
       document.getElementsByClassName("textselections")[0].children[sel-1].id = "selectionbox-selected";
+      textdecoration = sel-1;
       
     }
     var alphabet = "qwertyuiopasdfghjklzxcvbnm";
@@ -140,7 +143,9 @@
       var textout = ""
       for (i = 0; i < textin.length; i++) {
         if (textin.substring(i,i+1) != " " && textin.substring(i,i+1) != "_" && textin.substring(i,i+1) != "-"  ) {
-          textout = textout + textin.substring(i,i+1) + decoration.substring(0,1);}
+          if (textdecoration != -1) {
+            textout = textout + textin.substring(i,i+1) + decoration.substring(textdecoration,textdecoration+1);
+          } else {textout = textout + textin.substring(i,i+1);}}
         else {textout = textout + textin.substring(i,i+1);}
       }
       
